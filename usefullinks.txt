@@ -1,0 +1,25 @@
+NodeJs References:- 
+https://nodejs.org/docs/latest-v7.x/api/
+https://www.tutorialspoint.com/nodejs
+
+Django References:-
+https://www.djangoproject.com/download/
+https://www.tutorialspoint.com/django/django_apps_life_cycle.htm
+
+NPM ApigeeToll installation Reference:-
+https://www.npmjs.com/package/apigeetool
+Yeoman:- https://github.com/yeoman/yo
+Gulp:- https://gulpjs.com
+
+Oauth-Advanced Reference:-
+https://github.com/apigee/api-platform-samples/tree/master/sample-proxies/oauth-advanced
+
+IETF Standards for OAuth Authentication Reference:-
+https://tools.ietf.org/html/draft-ietf-oauth-v2-31
+
+Microservice Archticture:-
+http://microservices.io/patterns/microservices.html
+http://microservices.io/patterns/apigateway.html
+
+Python Advanced Reference:-
+https://www.python-course.eu/pipes.php
