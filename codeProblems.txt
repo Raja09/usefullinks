@@ -1,0 +1,45 @@
+find two elements in sorted array whose sum is equal to X . Write code for merge sort in an array. and 4 more
+
+Print top 100 numbers in sequence which match the following patter pow(2) * pow(3) * pow(5)   
+
+write algo of snake and ladder
+
+
+Write a program to rotate a string with index number?
+i/p:-Goibibo index:-4
+o/p:-iboGoib   
+
+Write a program to unified partitioning of the number 3?
+i/p-3
+2,1 or 1 2
+112   
+
+There are two arrays city[] and population[], each with n elements. Each city[i] corresponds to population[i], that is, each ith element in city[] has population of ith element in population[].
+Now, I've to sort the city[] array according to the population in them.   
+
+
+You're given an array of n numbers. Each number is between 0 and 100. For each number, you've to print "India" if the number is divisible by 3, "Pakistan" if the number is divisible by 5 and "Japan" if the number is divisible by both 3 and 5.   
+
+What happens when you open a webpage.?   
+
+
+Q1) given an array with [2,3,-3, 4, -4, 5,6, -6,-5, 10]. Output array should be consecutive string where sum is 0. output [3,-3, 4, -4, 5,6, -6,-5].
+Q2) write an alogrithm for snake and ladder.
+Q3) Design an ORM with MySQL. A table is given with 3 col, a,b,c.
+ORM requirements were,
+1) it should be able to create table, create columns, update columns, etc.
+2) How will you copy db schema from one dev machine to another
+
+ORM should be able to do following things.
+1) a = new A(1). it should return row with primary key=1
+2) a = new A(1,2,3). It should return row with a=1, b=2, c=3
+3) after doing 1 and 2 I should be able to update value of b. It means a.b = 4 should set column b = 4
+4) del a.b should delete b col of a and del a should delete a row.
+
+The last ORM design was very confusing. I asked HR for clarification who in turn asked an employee. From his explanation I know he didn't write the questions. He told me to write queries and code for design. I didn't expect this. In design question I have to write code.
+
+The position was for Python dev. The syntax a= new A(1). is not from Python.
+
+In 1) a = new A(1). is expected to return row. but in 3) and 4) it should be an instance where we can do any update and delete operation. In 4) they are asking to delete col b for a.
+
+In 2) it can returns a list of row. So in 3) you can not do a.b =4. No one was there to clarify such questions,
