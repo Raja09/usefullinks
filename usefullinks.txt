@@ -29,3 +29,9 @@ https://github.com/apigee/apigee-okta
 
 Apigee Edge PHP SDK
 https://github.com/apigee/edge-php-sdk
+
+Apigee Official open source projects 
+https://github.com/apigee
+
+Apigee Platform Samples
+https://github.com/apigee/api-platform-samples
