@@ -23,3 +23,9 @@ http://microservices.io/patterns/apigateway.html
 
 Python Advanced Reference:-
 https://www.python-course.eu/pipes.php
+
+Apigee-Okta integration
+https://github.com/apigee/apigee-okta
+
+Apigee Edge PHP SDK
+https://github.com/apigee/edge-php-sdk
