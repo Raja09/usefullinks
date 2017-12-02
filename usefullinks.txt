@@ -38,3 +38,15 @@ https://github.com/apigee/api-platform-samples
 
 Apigee Samples
 https://docs.apigee.com/api-services/samples/samples-reference
+
+Apigee Shared flow reference
+https://docs.apigee.com/api-services/content/shared-flow-bundle-configuration-reference
+
+Call Shared flow from FlowCallout Policy
+https://docs.apigee.com/api-services/reference/flow-callout-policy
+
+Reuse of shared flow
+https://docs.apigee.com/api-services/content/shared-flows
+
+Attaching Shared Flow
+https://docs.apigee.com/api-services/content/flow-hooks
