@@ -35,3 +35,6 @@ https://github.com/apigee
 
 Apigee Platform Samples
 https://github.com/apigee/api-platform-samples
+
+Apigee Samples
+https://docs.apigee.com/api-services/samples/samples-reference
