@@ -123,3 +123,57 @@ Feeds into data visualisation and BI tools
 In other words OLAP lends it-self well for analytical purposes and to process large datasets quickly to answer questions about data. (e.g. median duration of x, conversion rate of y). Popular systems: Redshift, HP Vertical, Teradata, KDP+ IBM Netezza
 
 OLTP for is designed to serve as a persistent state store for front-end applications. They excel at quickly looking up specific information as well as transactional procedures. (What is the name of current user, update billing address for set of clients). Popular OLTP systems: RDS, MySQL, PostgreSQL, Aurora, Oracle RDBMS, IBM D2.
+
+NodeJs
+
+1. What is nodeJs?
+Ans:- 
+	NodeJs is an open-source, cross-platform runtime environment used for the development of server-side web applications. NodeJs appliations are written in Javascript and run on a wide varity of operation systems.
+
+	NodeJs based on an event-driven architecture and non-blocking Input and Output API that is designed to optimize an application's throughput and scalability for real-time web applications.
+
+	The framework available for web development were all based on a stateless model. 
+	(A stateless model is where the data generated in one session. (such as information about user settings and events that occurred) is not maintained for usage in the next session with that user.)
+
+	With Node.js, there is finally a way for web applications to have real-time two-way connections, where both the client and server can initiate communication, allowing them to exchange data freely
+
+2. Why use NodeJs?
+Ans:-
+	
+3. Features of NodeJs?
+Ans:- 
+	1. Asynchronous event-driven IO helps concurrent request handling. This feature basically means that if a request is received by Node for some Input/Output operation, it will execute the operation in the background and continue with processing other requests.
+	2. Node uses the V8 JavaScript Runtime engine, the one which is used by Google Chrome. Node has a wrapper over the JavaScript engine which makes the runtime engine much faster and hence the processing of requests within Node also become faster.
+	3. Handling of concurrent requests – Another key functionality of Node is the ability to handle concurrent connections with a very minimal overhead on a single process.
+	4. The Node.js library uses JavaScript – This is another important aspect of development in Node.js. A major part of the development community is already well versed in javascript, and hence, development in Node.js becomes easier for a developer who knows javascript.
+
+4. When not to use NodeJs?
+Ans:-
+	Node.js can be used for a lot of applications with various purposes. The only scenario where it should not be used is where there are long processing times, which is required by the application.
+
+	Node is structured to be single-threaded. If an application is required to carry out some long-running calculations in the background, it won't be able to process any other requests. As discussed above, Node.js is used best where processing needs less dedicated CPU time.
+
+5. What is express.js?
+Ans:-
+	Express.js is a node js web application server framework, which is ecspecially for building single-page, multi-page and hybrid web appliacations.
+
+	It has become the standard server framework for node.js. Express is the backend part something know as the MEAN stack.
+
+	The MEAN is a free and open-source JavaScript software stack for building dynamic web sites and web applicaitons which has the following components:
+
+	1. MongoDB: The Standard nosql database
+	2. Express.js: The default web application framework
+	3. Angular.js: The Javascript MVC frameword used for web application
+	4. Node.js: Framework used for scalable server-side and networking application
+
+	The Express.js framework make it very easy to develop an application which can be used to handle multiple types for request like the GET, POST, PUT, DELETE.
+
+6. What are generators?
+Ans:-
+	Generators are function executions that can suspended or resumed at a later point
+	
+	Generators are useful when carrying out of concepts such as lazy execution. This basically means that by suspending execution and resuming at will, we are able to pull values only when we need to.
+
+	Generators have the below 2 methods :-
+	1. Yield method:- The yield method is called a function to halt the execution of the function at the specific line where the yield method is called
+	2. Next method :- This method is called from the main application to resume the execution of a function which has a yield method. The execution of the function will continue till the next yield method or till the end of the method.
