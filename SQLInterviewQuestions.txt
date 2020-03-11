@@ -1,0 +1,125 @@
+SQL DBs
+
+What is a windowing function ?
+Window functions operate on a set of rows and return a single aggregated value for each row. The term Window describes the set of rows in the database on which the function will operate.  e.g SUM(), MAX(), AVG(), RANK(), FIRST_VALUE(), etc.
+
+
+What is a stored procedure ?
+A stored procedure is a subroutine available to connected relational database system applications.
+Why would you use them ?
+Stored procedures usually provide a performance benefit over writing application code, for the following two reasons:
+
+They do not incur extra inter-program communication between the database and external application.
+
+Do not need to be compiled and executed for each instance, as storedprocs are compiled only once.
+
+A benefit of stored procedures is that you can centralize data access logic into a single place that is then easy for DBA's to optimize.
+
+Stored procedures also have a security benefit in that you can grant execute rights to a stored procedure but the user will not need to have read/write permissions on the underlying tables. This is a good first step against SQL injection.
+
+
+What are the different JOINs ?
+INNER, LEFT, RIGHT, FULL, CROSS
+
+
+What is a subquery ?
+A nested query.  
+
+
+Cloud
+
+What is serverless ?
+Serverless computing (or serverless for short), is an execution model where the cloud provider is responsible for executing a piece of code by dynamically allocating the resources. And only charging for the amount of resources used to run the code.
+
+
+What is the difference between IaaS, Paas and SaaS ?
+IaaS: Infrastructure as a service. Companies are responsible for managing applications, data runtime, middleware and OSes. Providers manage the underlying infrastructure such as virtualisation, servers, hard drives, etc.
+PaaS: Platform as a service. PaaS allows for rapid development of applications by managing the platform the applications should run on. The OS, Middleware and runtime are manager by the cloud provider.
+SaaS: Software as a service. Provides software to clients, and everything is managed by software as a service.
+
+
+What is edge-computing ?
+A distributed computing paradigm which brings computation and data storage closer to the location where it is needed.
+
+
+What is the difference between cloud, edge and on-premise ?
+
+Coding
+
+What is the difference between an object and a class ?
+Can you explain immutability ?
+What is the difference between OOP and Functional Programming ?
+
+NoSQL DBs
+
+What is a key-value store ?
+Stores data as key value pairs. Each key must be unique. These databases are extremely fast when you have the key but get slow if you have to query on the entire store.
+
+
+What is a column store ?
+These databases store table data “column-wise”. The data is persisted on a set of column files (which are effectively data files since they store table data). Each column file comprises of a certain number of physical disk blocks. A particular column is stored in a single column file
+
+
+What are the difference between row and column store ?
+In a row based database the row and all its column values are stored together. In column based databases based on its columns. Row based databases then to be more suitable for OLTP and column based for OLAP. 
+
+
+What is a document store ?
+An extension of the key-value store by storing values in a structured format specified in an XML or JSON document. Can be used to store pretty much anything.
+
+
+Data Warehouse & Data Lake
+
+Can you tell me what’s the difference between a database, data warehous, and  data lake ?
+Data warehouses and databases are both relational data systems, but were built to serve different purposes. A data warehouse is built to store large quantities of historical data and enable fast, complex queries across all the data, typically using Online Analytical Processing (OLAP). A data warehouse typically aggregates data from other databases to make them available to answer specific questions.  
+
+A database was built to store current transactions and enable fast access to specific transactions for ongoing business processes, known as Online Transaction Processing (OLTP).
+
+A Data Lake is a storage repository that can store large amount of structured, semi-structured, and unstructured data. It is a place to store every type of data in its native format with no fixed limits on account size or file. It offers high data quantity to increase analytic performance and native integration.
+
+
+Apache Spark
+What is RDD?
+What is a data frame ?
+What is parquet and Avro ?
+What are the differences between Parquet and Avro ?
+What is the difference between tumbling and sliding windows ?
+
+
+MapReduce
+
+What is the use case of map reduce ?
+ 
+
+Data pipelines
+
+What is an example of a serverless pipeline ?
+ 
+
+What is OLAP and OLTP in data processing ?
+
+OLTP: On-line Transaction Processing
+Characterised by a large number of short on-line transactions (INSERT, UPDATE, DELETE).
+
+Emphasis on fast query processing, maintaining data integrity and effectiveness measured in number of transactions per second
+
+Row based storage
+
+Used for back-end applications
+OLAP: On-line Analytical Processing
+
+Deals with historical data or archival data
+
+Relatively low volume of transactions
+
+Queries often very complex and involve aggregations
+
+Response time is an effective measure
+
+Columnar based storage
+
+Feeds into data visualisation and BI tools
+
+In other words OLAP lends it-self well for analytical purposes and to process large datasets quickly to answer questions about data. (e.g. median duration of x, conversion rate of y). Popular systems: Redshift, HP Vertical, Teradata, KDP+ IBM Netezza
+
+OLTP for is designed to serve as a persistent state store for front-end applications. They excel at quickly looking up specific information as well as transactional procedures. (What is the name of current user, update billing address for set of clients). Popular OLTP systems: RDS, MySQL, PostgreSQL, Aurora, Oracle RDBMS, IBM D2.
