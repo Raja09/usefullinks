@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ExtractVariables async="false" continueOnError="false" enabled="true" name="EV-RequestParams">
+    <DisplayName>EV-RequestParams</DisplayName>
+    <Properties/>
+    <URIPath name="name"/>
+    <QueryParam name="name"/>
+    <Header name="name"/>
+    <FormParam name="name"/>
+    <Variable name="client_id" type="string">
+        <FormParam>request.formparam.client_id</FormParam>
+    </Variable>
+    <Variable name="client_secret" type="string">
+        <FormParam>request.formparam.client_secret</FormParam>
+    </Variable>
+    <Variable name="username" type="string">
+        <FormParam>request.formparam.username</FormParam>
+    </Variable>
+    <Variable name="password" type="string">
+        <FormParam>request.formparam.password</FormParam>
+    </Variable>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+    <Source clearPayload="false">request</Source>
+</ExtractVariables>

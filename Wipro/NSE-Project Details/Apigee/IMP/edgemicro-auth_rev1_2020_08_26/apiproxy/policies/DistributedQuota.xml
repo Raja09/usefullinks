@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Quota type="calendar" async="false" continueOnError="true" enabled="true" name="DistributedQuota">
+    <DisplayName>DistributedQuota</DisplayName>
+    <FaultRules/>
+    <Properties/>
+    <Identifier ref="quota.identifier"/>
+    <MessageWeight ref="quota.weight"/>
+    <Allow count="0" countRef="quota.allow"/>
+    <AsynchronousConfiguration>
+        <SyncIntervalInSeconds>5</SyncIntervalInSeconds>
+        <SyncMessageCount>100</SyncMessageCount>
+    </AsynchronousConfiguration>
+    <Interval ref="quota.interval"></Interval>
+    <DataStoreFailureModeOpen>false</DataStoreFailureModeOpen>
+    <Distributed>true</Distributed>
+    <PreciseAtSecondsLevel>false</PreciseAtSecondsLevel>
+    <StartTime>2019-10-10 12:00:00</StartTime>
+    <Synchronous>false</Synchronous>
+    <TimeUnit ref="quota.unit"></TimeUnit>
+</Quota>

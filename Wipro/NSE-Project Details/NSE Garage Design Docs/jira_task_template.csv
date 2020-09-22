@@ -1,0 +1,9 @@
+Summary,Issue Type,Status,Project key,Project description,Project url,Priority,Resolution,Assignee,Reporter,Creator,Due Date,Description,Original Estimate,Remaining Estimate,Time Spent,Epic link,Story link
+Bitbucket Webhook Creation,Task,New Task,IA,,,Medium,,administrator,administrator,administrator,,,86400,57600,,,
+WAF testing on CICD toolstack url(staging),Task,Blocked,IA,,,Medium,,,kapil.chauhan,kapil.chauhan,,WAF testing on toolstack.nseindia.com,,,,,
+Hygieia URL Down,Task,Done,IA,,,Medium,,kapil.chauhan,kapil.chauhan,kapil.chauhan,,"Hygieia URL down showing gateway error.
+
+ ",3600,0,,,
+JaCoCo Implementation in Jenkins Pipeline,Task,In Development,IA,,,Medium,,kapil.chauhan,kapil.chauhan,kapil.chauhan,,Jacoco needs to be implemented in Jenkins Pipeline for all garages.,57600,28800,,,
+To Integrate slack with Jira,Task,New Task,IA,,,Medium,,administrator,administrator,administrator,,,21600,10800,,,
+Creating Jira field and workflow,Task,In Development,IA,,,Medium,,,administrator,administrator,,,10800,0,10800,,

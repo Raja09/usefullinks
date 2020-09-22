@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AssignMessage async="false" continueOnError="false" enabled="true" name="AM-SetVariables">
+    <DisplayName>AM-SetVariables</DisplayName>
+    <Properties/>
+    <Set>
+        <Headers/>
+        <QueryParams/>
+        <FormParams>
+            <FormParam name="client_id">{reservation.client_id}</FormParam>
+            <FormParam name="client_secret">{reservation.client_secret}</FormParam>
+            <FormParam name="username">{reservation.username}</FormParam>
+            <FormParam name="password">{reservation.password}</FormParam>
+            <FormParam name="grant_type">{reservation.grant_type}</FormParam>
+        </FormParams>
+        <!-- <Verb>GET</Verb> -->
+        <Path/>
+    </Set>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+    <AssignTo createNew="false" transport="http" type="request"/>
+</AssignMessage>

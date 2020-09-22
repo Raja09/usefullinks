@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<OAuthV2 async="false" continueOnError="false" enabled="true" name="GenerateAccessToken">
+    <DisplayName>GenerateAccessToken</DisplayName>
+    <Properties/>
+    <Attributes/>
+    <ExpiresIn>1800000</ExpiresIn>
+    <!-- 30 minutes -->
+    <!--<ExpiresIn>1800</ExpiresIn>-->
+    <ExternalAuthorization>false</ExternalAuthorization>
+    <Operation>GenerateAccessToken</Operation>
+    <SupportedGrantTypes>
+        <GrantType>password</GrantType>
+    </SupportedGrantTypes>
+    <GrantType>request.formparam.grant_type</GrantType>
+    <!--    <ClientId>{client_id}</ClientId>
+    <ClientSecret>{client_secret}</ClientSecret>-->
+    <UserName>request.formparam.username</UserName>
+    <Password>request.formparam.password</Password>
+    <Attributes>
+        <Attribute name="ip_address" ref="request.header.x-forwared-for" display="true"/>
+        <Attribute name="username" ref="request.content.username" display="true"/>
+    </Attributes>
+    <GenerateResponse enabled="true"/>
+    <Tokens/>
+</OAuthV2>

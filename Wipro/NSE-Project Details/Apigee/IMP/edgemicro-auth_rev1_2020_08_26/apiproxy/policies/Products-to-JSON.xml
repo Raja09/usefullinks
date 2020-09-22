@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<XMLToJSON async="false" continueOnError="false" enabled="true" name="Products-to-JSON">
+    <DisplayName>Products to JSON</DisplayName>
+    <FaultRules/>
+    <Properties/>
+    <Options>
+        <RecognizeBoolean>false</RecognizeBoolean>
+        <RecognizeNumber>false</RecognizeNumber>
+        <RecognizeNull>false</RecognizeNull>
+        <TextAlwaysAsProperty>false</TextAlwaysAsProperty>
+        <TextNodeName></TextNodeName>
+        <StripLevels>0</StripLevels>
+        <TreatAsArray>
+            <Path unwrap="false">Credentials/Credential</Path>
+            <Path unwrap="false">Credentials/Credential/ApiProducts/ApiProduct</Path>
+        </TreatAsArray>
+    </Options>
+    <OutputVariable>apiCredential</OutputVariable>
+    <Source>AccessEntity.ChildNodes.Access-App-Info.App.Credentials</Source>
+</XMLToJSON>

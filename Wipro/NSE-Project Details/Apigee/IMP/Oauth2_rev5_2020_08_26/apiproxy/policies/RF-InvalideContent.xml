@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<RaiseFault async="false" continueOnError="false" enabled="true" name="RF-InvalideContent">
+    <DisplayName>RF-InvalideContent</DisplayName>
+    <Properties/>
+    <FaultResponse>
+        <Set>
+            <Headers/>
+            <Payload contentType="application/json">
+                {
+                    "status": "415",
+                    "error": "Invalid content type"
+                }
+            </Payload>
+            <StatusCode>415</StatusCode>
+            <ReasonPhrase>Unsupported Media Type</ReasonPhrase>
+        </Set>
+    </FaultResponse>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+</RaiseFault>

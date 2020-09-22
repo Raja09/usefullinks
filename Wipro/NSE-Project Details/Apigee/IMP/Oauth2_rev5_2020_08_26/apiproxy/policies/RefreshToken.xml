@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<OAuthV2 async="false" continueOnError="false" enabled="true" name="RefreshToken">
+    <DisplayName>RefreshToken</DisplayName>
+    <Properties/>
+    <Attributes/>
+    <ExternalAuthorization>false</ExternalAuthorization>
+    <Operation>RefreshAccessToken</Operation>
+    <ExpiresIn>180000</ExpiresIn>
+    <ReuseRefreshToken>true</ReuseRefreshToken>
+    <!--<SupportedGrantTypes>
+        <GrantType>refresh_token</GrantType>
+    </SupportedGrantTypes>-->
+    <GrantType>request.formparam.grantType</GrantType>
+    <RefreshToken>request.formparam.refreshToken</RefreshToken>
+    <GenerateResponse enabled="true"/>
+    <Tokens/>
+</OAuthV2>

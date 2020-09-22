@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AssignMessage async="false" continueOnError="false" enabled="true" name="AM-SetOAuthResponse">
+    <DisplayName>AM-SetOAuthResponse</DisplayName>
+    <Properties/>
+    <Set>
+        <Payload contentType="application/json" variablePrefix="%" variableSuffix="#">
+            {
+              "token_type": "%authResponse.token_type#",
+              "access_token": "%authResponse.access_token#",
+              "refresh_token": "%authResponse.refresh_token#",
+              "expires_in": "%authResponse.expires_in#"
+            }
+        </Payload>
+    </Set>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+    <AssignTo createNew="false" transport="https" type="response"/>
+</AssignMessage>

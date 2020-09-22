@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<RaiseFault async="false" continueOnError="false" enabled="true" name="RF-ValidateRequestParamError">
+    <DisplayName>RF-ValidateRequestParamError</DisplayName>
+    <Properties/>
+    <FaultResponse>
+        <Set>
+            <Headers/>
+            <Payload contentType="application/json">
+                {
+                    "error": 415,
+                    "message": "invalid request parameters"
+                }
+            </Payload>
+            <StatusCode>415</StatusCode>
+            <ReasonPhrase>Unsupported Media Types</ReasonPhrase>
+        </Set>
+    </FaultResponse>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+</RaiseFault>

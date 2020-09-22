@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ExtractVariables async="false" continueOnError="false" enabled="true" name="EV-ExtractRequestPayload">
+    <DisplayName>EV-ExtractRequestPayload</DisplayName>
+    <Properties/>
+    <!--<URIPath name="name"/>-->
+    <!--<QueryParam name="name"/>-->
+    <!--<Header name="name"/>-->
+    <!--<FormParam name="name"/>-->
+    <!--<Variable name="name"/>-->
+    <IgnoreUnresolvedVariables>false</IgnoreUnresolvedVariables>
+    <JSONPayload>
+        <Variable name="client_id">
+            <JSONPath>$.clientId</JSONPath>
+        </Variable>
+        <Variable name="client_secret">
+            <JSONPath>$.clientSecret</JSONPath>
+        </Variable>
+        <Variable name="username">
+            <JSONPath>$.username</JSONPath>
+        </Variable>
+        <Variable name="password">
+            <JSONPath>$.password</JSONPath>
+        </Variable>
+        <Variable name="grant_type">
+            <JSONPath>$.grantType</JSONPath>
+        </Variable>
+    </JSONPayload>
+    <Source clearPayload="false">request</Source>
+    <VariablePrefix>reservation</VariablePrefix>
+    <!--<XMLPayload stopPayloadProcessing="false">-->
+    <!--    <Namespaces/>-->
+    <!--    <Variable name="name" type="boolean">-->
+    <!--        <XPath>//test/example</XPath>-->
+    <!--    </Variable>-->
+    <!--</XMLPayload>-->
+</ExtractVariables>

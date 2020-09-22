@@ -1,0 +1,243 @@
+{
+	"variables": [],
+	"info": {
+		"name": "OAS-Validation",
+		"_postman_id": "72438de9-cf4f-62c2-d600-cfa7e126bf71",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Happy Path",
+			"description": "",
+			"item": [
+				{
+					"name": "Create parent node",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"OK\"] = responseCode.code === 200;",
+									"try {",
+									"    var jsonData = JSON.parse(responseBody);",
+									"    tests[\"nodeName OK\"] = responseBody.has(\"nodeName\");",
+									"    tests[\"description OK\"] = responseBody.has(\"description\");",
+									"    tests[\"status OK\"] = responseBody.has(\"status\");",
+									"}",
+									"catch (e) {}"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "{{HOST}}/example/v1/nodes",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \n  \"nodeName\":\"Groot\",\n  \"description\":\"I am Groot\",\n  \"status\":\"Active\" \n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Partial update",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"OK\"] = responseCode.code === 200;",
+									"try {",
+									"    var jsonData = JSON.parse(responseBody);",
+									"    tests[\"status OK\"] = responseBody.has(\"status\");",
+									"}",
+									"catch (e) {}"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "{{HOST}}/example/v1/nodes/123456",
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \n  \"status\":\"Inactive\" \n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Complete update",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"OK\"] = responseCode.code === 200;",
+									"try {",
+									"    var jsonData = JSON.parse(responseBody);",
+									"    tests[\"nodeName OK\"] = responseBody.has(\"nodeName\");",
+									"    tests[\"description OK\"] = responseBody.has(\"description\");",
+									"    tests[\"status OK\"] = responseBody.has(\"status\");",
+									"}",
+									"catch (e) {}"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "{{HOST}}/example/v1/nodes/123456",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \n  \"nodeName\":\"Groot\",\n  \"description\":\"I AM GROOT\",\n  \"status\":\"Active\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Validation Errors",
+			"description": "",
+			"item": [
+				{
+					"name": "Create parent node - missing description",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"OK\"] = responseCode.code === 500;",
+									"try {",
+									"    var jsonData = JSON.parse(responseBody);",
+									"    tests[\"description not OK\"] = responseBody.has(\"failed\") && responseBody.has(\"description\");",
+									"}",
+									"catch (e) {}"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "{{HOST}}/example/v1/nodes",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \n  \"nodeName\":\"Groot\",\n  \"status\":\"Active\" \n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Partial update - missing status",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"OK\"] = responseCode.code === 500;",
+									"try {",
+									"    var jsonData = JSON.parse(responseBody);",
+									"    tests[\"status not OK\"] = responseBody.has(\"failed\") && responseBody.has(\"status\");",
+									"}",
+									"catch (e) {}"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "{{HOST}}/example/v1/nodes/123456",
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \n  \"description\":\"Who are you\" \n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Complete update - missing nodeName",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"OK\"] = responseCode.code === 500;",
+									"try {",
+									"    var jsonData = JSON.parse(responseBody);",
+									"    tests[\"nodeName not OK\"] = responseBody.has(\"failed\") && responseBody.has(\"nodeName\");",
+									"}",
+									"catch (e) {}"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "{{HOST}}/example/v1/nodes/123456",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \n  \"parentNodeId\":\"GROOT\",\n  \"description\":\"I am groot\",\n  \"status\":\"Defunct\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
