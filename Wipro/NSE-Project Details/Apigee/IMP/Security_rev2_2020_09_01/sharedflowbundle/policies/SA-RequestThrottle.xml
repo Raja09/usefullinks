@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<SpikeArrest async="false" continueOnError="false" enabled="true" name="SA-RequestThrottle">
-    <DisplayName>SA-RequestThrottle</DisplayName>
-    <Properties/>
-    <Identifier ref="client_id"/>
-    <!--<MessageWeight ref="request.header.weight"/>-->
-    <Rate>2ps</Rate>
-    <UseEffectiveCount>true</UseEffectiveCount>
-</SpikeArrest>
