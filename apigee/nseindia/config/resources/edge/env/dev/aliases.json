@@ -1,0 +1,13 @@
+[
+      {
+         "alias":"testSelfSignedCert",
+         "keystorename": "testKeyStorename",
+         "format": "selfsignedcert",
+         "keySize":"2048",
+         "sigAlg":"SHA256withRSA",
+         "subject":{
+            "commonName":"testcommonName"
+         },
+         "certValidityInDays":"60"
+      }
+]

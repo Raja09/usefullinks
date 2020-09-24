@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<SharedFlowBundle revision="1" name="api-security">
+    <ConfigurationVersion majorVersion="4" minorVersion="0"/>
+    <CreatedAt>1598935837348</CreatedAt>
+    <CreatedBy>wipro_rdirisam@nse.co.in</CreatedBy>
+    <Description>Add OOB policies to this secure from various kinds of attacks like DoS, content based, code injections</Description>
+    <DisplayName>api-security</DisplayName>
+    <LastModifiedAt>1599543849808</LastModifiedAt>
+    <LastModifiedBy>wipro_rdirisam@nse.co.in</LastModifiedBy>
+    <ManifestVersion>SHA-512:6531c185a90c5f1da5ef3267fdbf560327e5a851d9b96e82fc98955e11ee87c3fa4d0e7e1aadfb31661bd2c8789d3d835906c9c5828c693d18fff9a81877840b</ManifestVersion>
+    <Policies>
+        <Policy>AM-SetHeaderParameters</Policy>
+        <Policy>CheckAPIQuota</Policy>
+        <Policy>JWT-VerifyJWTAccessToken</Policy>
+        <Policy>KVM-GetPrivateKey</Policy>
+        <Policy>OA-InvalidateAccessToken</Policy>
+        <Policy>OA-VerifyAccessToken</Policy>
+        <Policy>RE-DefaultAttacks</Policy>
+        <Policy>SA-RequestThrottle</Policy>
+    </Policies>
+    <Resources/>
+    <Spec></Spec>
+    <subType>SharedFlow</subType>
+    <SharedFlows>
+        <SharedFlow>default</SharedFlow>
+    </SharedFlows>
+</SharedFlowBundle>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ExtractVariables async="false" continueOnError="false" enabled="true" name="EV-SCResponse">
+    <DisplayName>EV-SCResponse</DisplayName>
+    <Properties/>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+    <JSONPayload>
+        <!--<Variable name="response,role">-->
+        <!--    <JSONPath>{$.response.role}</JSONPath>-->
+        <!--</Variable>-->
+        <!--<Variable name="response.message">-->
+        <!--    <JSONPath>{$.response.message}</JSONPath>-->
+        <!--</Variable>-->
+        <Variable name="errorRole" type="string">
+            <JSONPath>$.error.role</JSONPath>
+        </Variable>
+        <Variable name="errorSessionStatus" type="string">
+            <JSONPath>$.error.sessionStatus</JSONPath>
+        </Variable>
+        <Variable name="errorRemainingAttempts" type="string">
+            <JSONPath>$.error.remainingAttempts</JSONPath>
+        </Variable>
+        <Variable name="errorMessage" type="string">
+            <JSONPath>$.error.message</JSONPath>
+        </Variable>
+        <Variable name="headerStatus">
+            <JSONPath>$.status</JSONPath>
+        </Variable>
+    </JSONPayload>
+    <Source clearPayload="false">calloutResponse</Source>
+</ExtractVariables>

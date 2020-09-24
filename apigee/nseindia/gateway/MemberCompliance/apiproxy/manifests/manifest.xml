@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Manifest name="manifest">
+    <Policies>
+        <VersionInfo resourceName="AM-AssignValidationError" version="SHA-512:f081ffdfb3a967fd71629a7399fece19fc7af57a0bf1520756ba61470348c58343955378bebc8903717077c990f755d5ef8116baa7999f1a72d23e24b7e9a1fa"/>
+        <VersionInfo resourceName="FC-Security" version="SHA-512:b9eb1b948b96afe6d6051539c123b2a850ed7a5916d3093d5c226ad0aeb7c954186f558dce2ddbb11390caaaabc832d9b7da18c2c8b8a271e52b89950b026b6e"/>
+        <VersionInfo resourceName="JS-ValidateRequest" version="SHA-512:905d79ee0ba0c25cc9057e053ace25fc7e5259b6c625e33fb0368cca233f8a7c3220dd963d98556eb4b38e86552c521788042e427f1c2674814f6901462a419a"/>
+    </Policies>
+    <ProxyEndpoints>
+        <VersionInfo resourceName="default" version="SHA-512:3b0ad53651b8812bc33af20daafea4636fbd20aafb4c93c9eb13a4bf7f1a0a6ea9a0915f2670ee004e5a6614a323287769f3f3aaf522c21203b8726225d124c7"/>
+    </ProxyEndpoints>
+    <Resources>
+        <VersionInfo resourceName="jsc://ValidateRequest.js" version="SHA-512:faacab2bdf830426b1356f7a88517698def5f81731828a53af6105282a1aa5b4121cb5129e6f299b77e005bdc330f99ebdefded7b77ce2464173063119307e8a"/>
+        <VersionInfo resourceName="jsc://oas.js" version="SHA-512:166a508cc257940c2c7091e0fd3579bc2fefe8941f04204001e46ffb7e327b3ab0513c119596be1fb34d0ad419c46236f8ab64390d4429ad65ab52aec2022619"/>
+        <VersionInfo resourceName="jsc://tv4-min.js" version="SHA-512:46a86c32fa40a218845cd609f6e5908f5e9a447147c746c46eb5e32ce252cc4043d5e7c08fd5ba1e16a6198d86967a8e5879bd09d22b951d7bda4321e0639185"/>
+    </Resources>
+    <SharedFlows/>
+    <TargetEndpoints>
+        <VersionInfo resourceName="default" version="SHA-512:52c450aa88ffdd7c58477a07a532575c8bf5c8d1203d2cec0d0bef3a0adc024e039ca0348b1ed1e86742dd579e8e4a52d19eb482ebee5021870c97b89ad2f0e4"/>
+    </TargetEndpoints>
+</Manifest>

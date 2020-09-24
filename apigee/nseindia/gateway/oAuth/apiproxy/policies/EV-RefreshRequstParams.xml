@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ExtractVariables async="false" continueOnError="false" enabled="true" name="EV-RefreshRequstParams">
+    <DisplayName>EV-RefreshRequstParams</DisplayName>
+    <Properties/>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+    <JSONPayload>
+        <Variable name="client_id">
+            <JSONPath>$.clientId</JSONPath>
+        </Variable>
+        <Variable name="client_secret">
+            <JSONPath>$.clientSecret</JSONPath>
+        </Variable>
+        <Variable name="refresh_token">
+            <JSONPath>$.refreshToken</JSONPath>
+        </Variable>
+        <Variable name="refresh_token">
+            <JSONPath>$.refreshToken</JSONPath>
+        </Variable>
+    </JSONPayload>
+    <Source clearPayload="false">request</Source>
+    <VariablePrefix>apigee</VariablePrefix>
+</ExtractVariables>

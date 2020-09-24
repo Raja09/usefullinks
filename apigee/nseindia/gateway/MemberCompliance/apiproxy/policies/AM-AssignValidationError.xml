@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AssignMessage async="false" continueOnError="false" enabled="true" name="AM-AssignValidationError">
+    <DisplayName>AM-AssignValidationError</DisplayName>
+    <Properties/>
+    <Set>
+        <Headers>
+            <Header name="status">400</Header>
+        </Headers>
+        <QueryParams/>
+        <FormParams/>
+        <!-- <Verb>GET</Verb> -->
+        <Path/>
+        <Payload variablePrefix="@" variableSuffix="#" contentType="application/json">
+            {
+                "response": {},
+                "error": {
+                    "messages": [
+                        "@javascript.error.message#"
+                    ],
+                    "params": [
+                        "@javascript.error.params#"
+                    ]
+                }
+            }
+        </Payload>
+    </Set>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+    <AssignTo createNew="false" transport="https" type="response"/>
+</AssignMessage>

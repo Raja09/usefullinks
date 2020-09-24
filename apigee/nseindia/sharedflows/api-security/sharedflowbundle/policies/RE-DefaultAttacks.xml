@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<RegularExpressionProtection async="false" continueOnError="false" enabled="true" name="RE-DefaultAttacks">
+    <DisplayName>RE-DefaultAttacks</DisplayName>
+    <Properties/>
+    <IgnoreUnresolvedVariables>false</IgnoreUnresolvedVariables>
+    <JSONPayload>
+        <JSONPath>
+            <!--SQL Injection-->
+            <Pattern ignoreCase="false">[\s]*(?i)((delete)|(exec)|(drop\s*table)|(insert)|(shutdown)|(update)|(\bor\b))</Pattern>
+            <!--Server-Side Incule injection-->
+            <Pattern ignoreCase="false">&lt;!--#(include|exec|echo|config|printenv)\s+.*</Pattern>
+            <!--XPath Abbreviated Syntax Injection-->
+            <Pattern ignoreCase="false">(/(@?[\w_?\w:\*]+(\[[^]]+\])*)?)+</Pattern>
+            <!--XPath Expanded Syntax Injection-->
+            <Pattern ignoreCase="false">/?(ancestor(-or-self)?|descendant(-or-self)?|following(-sibling))</Pattern>
+            <!--JavaScript Injection-->
+            <Pattern ignoreCase="false">&lt;\s*script\b[^&gt;]*&gt;[^&lt;]+&lt;\s*/\s*script\s*&gt;</Pattern>
+            <!--Java Injection-->
+            <Pattern ignoreCase="false">.*?Exception in thread.*</Pattern>
+            <Expression>$.</Expression>
+        </JSONPath>
+    </JSONPayload>
+    <QueryParam name="request.querystring">
+        <!--SQL Injection-->
+        <Pattern ignoreCase="false">[\s]*(?i)((delete)|(exec)|(drop\s*table)|(insert)|(shutdown)|(update)|(\bor\b))</Pattern>
+        <!--Server-Side Incule injection-->
+        <Pattern ignoreCase="false">&lt;!--#(include|exec|echo|config|printenv)\s+.*</Pattern>
+        <!--XPath Abbreviated Syntax Injection-->
+        <Pattern ignoreCase="false">(/(@?[\w_?\w:\*]+(\[[^]]+\])*)?)+</Pattern>
+        <!--XPath Expanded Syntax Injection-->
+        <Pattern ignoreCase="false">/?(ancestor(-or-self)?|descendant(-or-self)?|following(-sibling))</Pattern>
+        <!--JavaScript Injection-->
+        <Pattern ignoreCase="false">&lt;\s*script\b[^&gt;]*&gt;[^&lt;]+&lt;\s*/\s*script\s*&gt;</Pattern>
+        <!--Java Injection-->
+        <Pattern ignoreCase="false">.*?Exception in thread.*</Pattern>
+    </QueryParam>
+    <FormParam name="request.formstring">
+        <!--SQL Injection-->
+        <Pattern ignoreCase="false">[\s]*(?i)((delete)|(exec)|(drop\s*table)|(insert)|(shutdown)|(update)|(\bor\b))</Pattern>
+        <!--Server-Side Incule injection-->
+        <Pattern ignoreCase="false">&lt;!--#(include|exec|echo|config|printenv)\s+.*</Pattern>
+        <!--XPath Abbreviated Syntax Injection-->
+        <Pattern ignoreCase="false">(/(@?[\w_?\w:\*]+(\[[^]]+\])*)?)+</Pattern>
+        <!--XPath Expanded Syntax Injection-->
+        <Pattern ignoreCase="false">/?(ancestor(-or-self)?|descendant(-or-self)?|following(-sibling))</Pattern>
+        <!--JavaScript Injection-->
+        <Pattern ignoreCase="false">&lt;\s*script\b[^&gt;]*&gt;[^&lt;]+&lt;\s*/\s*script\s*&gt;</Pattern>
+        <!--Java Injection-->
+        <Pattern ignoreCase="false">.*?Exception in thread.*</Pattern>
+    </FormParam>
+    <Variable name="request.content">
+        <!--SQL Injection-->
+        <Pattern ignoreCase="false">[\s]*(?i)((delete)|(exec)|(drop\s*table)|(insert)|(shutdown)|(update)|(\bor\b))</Pattern>
+        <!--Server-Side Incule injection-->
+        <Pattern ignoreCase="false">&lt;!--#(include|exec|echo|config|printenv)\s+.*</Pattern>
+        <!--XPath Abbreviated Syntax Injection-->
+        <Pattern ignoreCase="false">(/(@?[\w_?\w:\*]+(\[[^]]+\])*)?)+</Pattern>
+        <!--XPath Expanded Syntax Injection-->
+        <Pattern ignoreCase="false">/?(ancestor(-or-self)?|descendant(-or-self)?|following(-sibling))</Pattern>
+        <!--JavaScript Injection-->
+        <Pattern ignoreCase="false">&lt;\s*script\b[^&gt;]*&gt;[^&lt;]+&lt;\s*/\s*script\s*&gt;</Pattern>
+        <!--Java Injection-->
+        <Pattern ignoreCase="false">.*?Exception in thread.*</Pattern>
+    </Variable>
+    <Source>request</Source>
+    <!--<XMLPayload>-->
+    <!--    <Namespaces/>-->
+    <!--    <XPath>-->
+    <!--        <Pattern ignoreCase="false">pattern</Pattern>-->
+    <!--        <Expression>expression</Expression>-->
+    <!--        <Type>string</Type>-->
+    <!--    </XPath>-->
+    <!--</XMLPayload>-->
+</RegularExpressionProtection>

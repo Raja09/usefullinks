@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<APIProxy revision="1" name="CollateralManagement">
+    <Basepaths>/v1/collateral</Basepaths>
+    <ConfigurationVersion majorVersion="4" minorVersion="0"/>
+    <CreatedAt>1598866273397</CreatedAt>
+    <CreatedBy>wipro_rdirisam@nse.co.in</CreatedBy>
+    <Description>CollateralManagement</Description>
+    <DisplayName>CollateralManagement</DisplayName>
+    <LastModifiedAt>1598958684765</LastModifiedAt>
+    <LastModifiedBy>wipro_rdirisam@nse.co.in</LastModifiedBy>
+    <ManifestVersion>SHA-512:562795383425271d79bccd7ba46016f325396c0fcbbbc0c693756d9bb7dff4416ee6c0fe63b53231ea39c7ff593e827070dd452d50829decfaf22c471eac36d6</ManifestVersion>
+    <Policies>
+        <Policy>FC-Security</Policy>
+        <Policy>JS-ValidateRequest</Policy>
+    </Policies>
+    <ProxyEndpoints>
+        <ProxyEndpoint>default</ProxyEndpoint>
+    </ProxyEndpoints>
+    <Resources>
+        <Resource>jsc://ValidateRequest.js</Resource>
+        <Resource>jsc://oas.js</Resource>
+        <Resource>jsc://tv4-min.js</Resource>
+    </Resources>
+    <Spec></Spec>
+    <TargetServers/>
+    <TargetEndpoints>
+        <TargetEndpoint>default</TargetEndpoint>
+    </TargetEndpoints>
+</APIProxy>

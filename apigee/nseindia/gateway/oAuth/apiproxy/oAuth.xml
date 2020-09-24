@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<APIProxy revision="7" name="oAuth">
+    <Basepaths>/oauth</Basepaths>
+    <ConfigurationVersion majorVersion="4" minorVersion="0"/>
+    <CreatedAt>1599538032017</CreatedAt>
+    <CreatedBy>wipro_rdirisam@nse.co.in</CreatedBy>
+    <Description></Description>
+    <DisplayName>oauth2</DisplayName>
+    <LastModifiedAt>1599538032017</LastModifiedAt>
+    <LastModifiedBy>wipro_rdirisam@nse.co.in</LastModifiedBy>
+    <ManifestVersion>SHA-512:38ce8c8796434292464608b32599ce6fc48f339ce3bfc16bd866e9b38b6772c003165d9f924044986a6d384ee3e56151f71b4ac880e2f004e36424e237dc2591</ManifestVersion>
+    <Policies>
+        <Policy>AM-DefaultError</Policy>
+        <Policy>AM-JSValidateRequestFailed</Policy>
+        <Policy>AM-SetParameters</Policy>
+        <Policy>AM-SetRefreshParams</Policy>
+        <Policy>AM-UserAuthenticationError</Policy>
+        <Policy>EV-RefreshRequstParams</Policy>
+        <Policy>EV-RequestParameters</Policy>
+        <Policy>EV-SCResponse</Policy>
+        <Policy>EV-SCUserLoginResponse</Policy>
+        <Policy>GenerateJWT</Policy>
+        <Policy>JS-SetResponse</Policy>
+        <Policy>JS-ValidateRequest</Policy>
+        <Policy>KVM-GetPrivateKey</Policy>
+        <Policy>OA-GenerateAccessToken</Policy>
+        <Policy>OA-RefreshToken</Policy>
+        <Policy>RF-UnknownRequest</Policy>
+        <Policy>RF-ValidationError</Policy>
+        <Policy>RF-invalidContent</Policy>
+        <Policy>SC-UserAuthentication</Policy>
+        <Policy>Set-JWT-Variables</Policy>
+        <Policy>add-cors</Policy>
+    </Policies>
+    <ProxyEndpoints>
+        <ProxyEndpoint>default</ProxyEndpoint>
+    </ProxyEndpoints>
+    <Resources>
+        <Resource>jsc://JS-SetResponse.js</Resource>
+        <Resource>jsc://JS-ValidateReqest.js</Resource>
+        <Resource>jsc://Set-JWT-Variables.js</Resource>
+    </Resources>
+    <Spec></Spec>
+    <TargetServers/>
+    <TargetEndpoints/>
+</APIProxy>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<OAuthV2 async="false" continueOnError="false" enabled="true" name="OA-GenerateAccessToken">
+    <DisplayName>OA-GenerateAccessToken</DisplayName>
+    <Properties/>
+    <ExternalAuthorization>false</ExternalAuthorization>
+    <!-- Token expire set for 30 minutes -->
+    <ExpiresIn>1800000</ExpiresIn>
+    <Operation>GenerateAccessToken</Operation>
+    <SupportedGrantTypes>
+        <GrantType>password</GrantType>
+        <GrantType>client_credentials</GrantType>
+    </SupportedGrantTypes>
+    <GrantType>request.formparam.grant_type</GrantType>
+    <Attributes>
+        <Attribute name="ip_address" ref="request.header.X-Forwarded-For" display="true"/>
+        <Attribute name="userId" ref="request.formparam.userId" display="true"/>
+        <Attribute name="memberId" ref="request.formparam.memberId" display="true"/>
+        <!--<Attribute name="deviceId" ref="request.formparam.deviceId" display="true"/>-->
+    </Attributes>
+    <GenerateResponse enabled="false"/>
+    <AppEndUser>request.formparam.userId</AppEndUser>
+    <Tokens/>
+</OAuthV2>

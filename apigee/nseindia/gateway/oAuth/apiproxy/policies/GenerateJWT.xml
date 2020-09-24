@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<GenerateJWT async="false" continueOnError="false" enabled="true" name="GenerateJWT">
+    <DisplayName>GenerateJWT</DisplayName>
+    <Algorithm>HS256</Algorithm>
+    <SecretKey>
+        <Value ref="private.privateKey"/>
+    </SecretKey>
+    <Subject>subject-subject</Subject>
+    <Issuer>urn://apigee-edge-JWT-policy-test</Issuer>
+    <Audience>audience1,audience2</Audience>
+    <ExpiresIn>30m</ExpiresIn>
+    <AdditionalClaims>
+        <Claim name="client_id" ref="apigee.client_id" type="string" wantFaultIfUnresolved="false"/>
+        <Claim name="userId" ref="apigee.userId" type="string" wantFaultIfUnresolved="false"/>
+        <Claim name="memberId" ref="apigee.memberId" type="string" wantFaultIfUnresolved="false"/>
+        <!--<Claim name="deviceId" ref="apigee.deviceId" type="string" wantFaultIfUnresolved="false"/>-->
+        <Claim name="access_token" ref="apigee.access_token" type="string" wantFaultIfUnresolved="false"/>
+        <Claim name="application_name" ref="apigee.developer.app.name" type="string" wantFaultIfUnresolved="false"/>
+        <Claim name="developer_email" ref="apigee.developer.email" type="string" wantFaultIfUnresolved="false"/>
+        <Claim name="ip_address" ref="request.header.X-Forwarded-For" type="string" wantFaultIfUnresolved="false"/>
+    </AdditionalClaims>
+    <OutputVariable>jwt-message</OutputVariable>
+</GenerateJWT>

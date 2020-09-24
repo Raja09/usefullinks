@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "name": "dev",
+            "policies": [],
+            "sharedflows": []
+        },
+        {
+            "name": "uat",
+            "policies": [],
+            "sharedflows": []
+        }
+    ]
+}

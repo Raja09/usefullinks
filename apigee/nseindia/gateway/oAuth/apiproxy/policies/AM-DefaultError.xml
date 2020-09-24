@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AssignMessage async="false" continueOnError="false" enabled="true" name="AM-DefaultError">
+    <DisplayName>AM-DefaultError</DisplayName>
+    <Properties/>
+    <Set>
+        <Headers>
+            <Header name="status">415</Header>
+        </Headers>
+        <QueryParams/>
+        <FormParams/>
+        <!-- <Verb>GET</Verb> -->
+        <Path/>
+        <Payload contentType="applicaiton/json" variablePrefix="%" variableSuffix="#">
+            {
+                "response": {},
+                "error": {
+                    "message": "Please provide a valid credentials"
+                }
+            }
+        </Payload>
+    </Set>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+    <AssignTo createNew="false" transport="https" type="response"/>
+</AssignMessage>
